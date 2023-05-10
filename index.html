@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/icon.png" type="image/x-icon" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/90420b797b.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="index.css">
+    <title>Encriptador</title>
+</head>
+
+<body>
+    <div class="header">
+        <div class="logo">
+           <img src="img/logo.svg" alt="Logo"></a>
+        </div>
+        </div>
+
+    <div class="container">
+        <div class="textbox left">
+            <input type="text" id="textbox-input" placeholder="Ingrese texto a encriptar" oninput="hideImage()">
+            <p> <i class="fa-solid fa-circle-exclamation"></i> Solo letras minúsculas y sin acentos</p>
+            <div class="buttons">
+                <button class="btn__1" onclick="encryptText()">Encriptar</button>
+                <button class="btn__2" onclick="decryptText()">Desencriptar</button>
+            </div>
+        </div>
+
+        <div class="textbox right">
+            <input id="textbox-right" type="text" placeholder="" readonly>
+            <img src="img/Muñeco.png" class="img" alt="Imagen" id="image" />
+            <p id="text-below-image"> <strong>Ningún mensaje fue encontrado</strong> <br>Ingrese el texto que desee
+                encriptar o desencriptar.</p>
+            <div class="buttons__copiar" id="copiar">
+                <button class="btn__copiar" onclick="copyText()">Copiar</button>
+            </div>
+        </div>
+    </div>
+    <div id="notification" class="notification"></div>
+    <script src="index.js"></script>
+</body>
+</html>
